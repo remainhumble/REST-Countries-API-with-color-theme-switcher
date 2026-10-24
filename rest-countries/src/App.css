@@ -7,6 +7,14 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.moon-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+  vertical-align: middle;
+  color: black;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
