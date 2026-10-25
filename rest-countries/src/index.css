@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 :root {
   --text: #6b6375;
@@ -16,7 +16,6 @@
   /* --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace; */
-
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -72,17 +71,15 @@ body {
 h1,
 h2 {
   font-family: var(--heading);
-  font-weight: 500;
   color: var(--text-h);
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
+  /* letter-spacing: -1.68px; */
+  /* margin: 32px 0; */
   @media (max-width: 1024px) {
-    font-size: 36px;
     margin: 20px 0;
+    /* font-size: 24px; */
   }
 }
 h2 {
