@@ -20,10 +20,10 @@ function App() {
           Dark Mode
         </button>
       </header>
-      <main>
-        <div id="grid" className="flex justify-center items-center w-80">
+      <main className="flex justify-center items-center lg:px-8 lg:py-6 px-4 py-4 dark:bg-grey-950 dark:text-white">
+     
           <Countries />
-        </div>
+    
       </main>
     </>
   );
