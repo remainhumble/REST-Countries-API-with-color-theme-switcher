@@ -13,6 +13,12 @@
   font-family: "Nunito Sans", sans-serif;
 }
 
+body {
+  margin: 0;
+  background: var(--color-grey-50);
+  color: var(--color-grey-950);
+}
+
 .moon-icon {
   width: 1.5rem;
   height: 1.5rem;
