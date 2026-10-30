@@ -26,7 +26,7 @@ function App() {
 
       <main className="flex flex-col justify-center lg:px-8 lg:py-6 px-4 py-4 dark:bg-grey-950 dark:text-white">
         <div className="flex flex-col lg:flex-row justify-between lg:items-center my-5 gap-3">
-          <SearchBar />
+          {<SearchBar />}
           <Filter />
         </div>
         <Countries />

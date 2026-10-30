@@ -13,12 +13,12 @@ const Countries = () => (
           alt={`Flag of ${country.name}`}
         />
         <div className="px-4 py-8 flex flex-col justify-center gap-1">
-          <h2 className="font-extrabold pb-4">
-            {country.name}
-          </h2>
+          <h2 className="font-extrabold pb-4">{country.name}</h2>
           <p>
             <span className="font-semibold">Population: </span>
-            <span className="font-light">{country.population}</span>
+            <span className="font-light">
+              {country.population.toLocaleString()}
+            </span>
           </p>
           <p>
             <span className="font-semibold">Region: </span>{" "}

@@ -6,7 +6,7 @@ const Filter = () => {
 
   return (
     <div>
-      <button className="flex justify-around items-center min-w-50 text-base cursor-pointer mt-6 mb-2 py-3 w-50 shadow-md shadow-grey-90 rounded-md">
+      <button className="flex justify-around items-center min-w-50 text-base cursor-pointer mt-6 mb-4 py-3 w-50 shadow-md shadow-grey-90 rounded-md">
         Filter by Region
         <svg
           xmlns="http://www.w3.org/2000/svg"
