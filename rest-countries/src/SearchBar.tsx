@@ -1,28 +1,38 @@
 import { useState } from "react";
 import allCountries from "../../data.json";
+import "./App.css";
 
 // NEEDS WORK
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredData = allCountries.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.trim().toLowerCase()),
+  const prefix = searchTerm.trim().toLowerCase();
+
+  const filteredData = allCountries.filter((country) =>
+    country.name.toLowerCase().startsWith(prefix),
   );
 
   return (
     <div>
       <input
-        className="px-4 py-3 w-full md:min-w-auto shadow-md shadow-grey-90 rounded-md"
+        className="px-4 py-3 w-full lg:w-100 shadow-md shadow-grey-90 rounded-md mt-6 mb-4"
         type="text"
-        placeholder="🔍 Search for a country..."
+        placeholder="🔍︎      Search for a country..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-
       {searchTerm.trim() !== "" && (
         <ul>
           {filteredData.map((item) => (
-            <li className="px-4 py-3 w-full" key={item.alpha3Code}>{item.name}</li>
+            <li className="px-4 py-3 w-full cursor-pointer hover:bg-grey-400 dark:hover:bg-grey-700 z-10" key={item.alpha3Code}>
+              {item.name
+                .toLowerCase()
+                .startsWith(searchTerm.trim().toLowerCase()) ? (
+                <span className="font-bold">{item.name}</span>
+              ) : (
+                <span>{item.name}</span>
+              )}
+            </li>
           ))}
         </ul>
       )}
