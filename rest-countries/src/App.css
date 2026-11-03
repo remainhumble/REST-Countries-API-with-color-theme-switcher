@@ -38,6 +38,10 @@ body {
   border-radius: 0.375rem;
 }
 
+.dropdown-content.show {
+  display: block;
+}
+
 /* Links inside the dropdown */
 .dropdown-content a {
   background-color: white;
