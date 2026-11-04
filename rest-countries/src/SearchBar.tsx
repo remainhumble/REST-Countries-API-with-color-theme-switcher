@@ -22,9 +22,12 @@ const SearchBar = () => {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       {searchTerm.trim() !== "" && (
-        <ul>
+        <ul className="absolute bg-white rounded-md shadow-md shadow-grey-90 w-full lg:w-100 max-h-60 overflow-y-auto">
           {filteredData.map((item) => (
-            <li className="px-4 py-3 w-full cursor-pointer hover:bg-grey-400 dark:hover:bg-grey-700 z-10" key={item.alpha3Code}>
+            <li
+              className=" px-4 py-3 cursor-pointer hover:bg-grey-400 dark:hover:bg-grey-700 z-10"
+              key={item.alpha3Code}
+            >
               {item.name
                 .toLowerCase()
                 .startsWith(searchTerm.trim().toLowerCase()) ? (
