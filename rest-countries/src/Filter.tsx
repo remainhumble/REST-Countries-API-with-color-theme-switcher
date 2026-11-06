@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "./ThemeContext";
 import "./App.css";
 
 const Filter = () => {
+  const theme = useContext(ThemeContext);
+
   // toggle needed
 
   const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +17,7 @@ const Filter = () => {
       <button
         onClick={toggleVisibility}
         aria-expanded={isVisible}
-        className="flex justify-around items-center min-w-50 text-base cursor-pointer mt-6 mb-1 py-3 w-50 shadow-md shadow-grey-90 rounded-md"
+        className={`flex justify-around items-center min-w-50 text-base cursor-pointer mt-6 mb-1 py-3 w-50 shadow-md shadow-grey-90 rounded-md ${theme}`}
       >
         Filter by Region
         <svg
