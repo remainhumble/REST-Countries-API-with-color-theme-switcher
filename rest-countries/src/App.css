@@ -6,6 +6,9 @@
   --color-grey-50: hsl(0, 0%, 99%);
   --color-grey-400: hsl(0, 0%, 50%);
   --color-blue-900: hsl(209, 23%, 22%);
+  --color-blue-900-dark: hsl(209, 23%, 22%);
+  --color-blue-950-dark: hsl(207, 26%, 17%);
+  --color-white-dark: hsl(0, 100%, 100%);
 }
 
 * {

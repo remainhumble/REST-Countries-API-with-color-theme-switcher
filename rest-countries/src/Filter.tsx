@@ -5,8 +5,6 @@ import "./App.css";
 const Filter = () => {
   const theme = useContext(ThemeContext);
 
-  // toggle needed
-
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
     setIsVisible((visible) => !visible);

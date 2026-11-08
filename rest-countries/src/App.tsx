@@ -1,50 +1,35 @@
 import "./App.css";
-import { useState } from "react";
+
 import Countries from "./Countries";
 import Filter from "./Filter";
 import SearchBar from "./SearchBar";
-import { ThemeContext, type Theme } from "./ThemeContext";
+
+import { ThemeProvider } from "./ThemeContext";
+import ToggleButton from "./ToggleButton";
 
 function App() {
-  const [theme, setTheme] = useState<Theme>("dark");
+
   return (
     <>
-      <div className="flex min-h-dvh flex-col">
-        <header className="flex justify-between items-center lg:px-8 lg:py-6 px-4 py-4 shadow-md dark:bg-grey-950 dark:text-white">
-          <h1 className="text-grey-950 font-extrabold tracking-normal">
-            Where in the world?
-          </h1>
-          <button
-            className="flex items-center gap-2 text-grey-950 cursor-pointer font-semibold dark:text-white"
-            onClick={() =>
-              setTheme((currentTheme) =>
-                currentTheme === "dark" ? "light" : "dark",
-              )
-            }
-          >
-            <svg
-              role="img"
-              className="moon-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 640 640"
-              aria-hidden="true"
-            >
-              <path d="M303.3 112.7C196.2 121.2 112 210.8 112 320C112 434.9 205.1 528 320 528C353.3 528 384.7 520.2 412.6 506.3C309.2 482.9 232 390.5 232 280C232 214.2 259.4 154.9 303.3 112.7zM64 320C64 178.6 178.6 64 320 64C339.4 64 358.4 66.2 376.7 70.3C386.6 72.5 394 80.8 395.2 90.8C396.4 100.8 391.2 110.6 382.1 115.2C321.5 145.4 280 207.9 280 280C280 381.6 362.4 464 464 464C469 464 473.9 463.8 478.8 463.4C488.9 462.6 498.4 468.2 502.6 477.5C506.8 486.8 504.6 497.6 497.3 504.6C451.3 548.8 388.8 576 320 576C178.6 576 64 461.4 64 320z" />
-            </svg>
-            Dark Mode
-          </button>
-        </header>
+      <ThemeProvider>
+        <div className="flex min-h-dvh flex-col">
+          <header className="flex justify-between items-center lg:px-8 lg:py-6 px-4 py-4 shadow-md ">
+            <h1 className={`text-grey-950 font-extrabold tracking-normal`}>
+              Where in the world?
+            </h1>
+            <ToggleButton />
+          </header>
 
-        <main className="flex flex-1 flex-col lg:px-8 lg:py-6 px-4 py-4 dark:bg-grey-950 dark:text-white">
-          <div className="flex shrink-0 flex-col lg:flex-row justify-between mb-11">
-            <SearchBar />
-            <ThemeContext.Provider value={theme}>
+          <main className="flex flex-1 flex-col lg:px-8 lg:py-6 px-4 py-4 ">
+            <div className="flex shrink-0 flex-col lg:flex-row justify-between mb-11">
+              <SearchBar />
+
               <Filter />
-            </ThemeContext.Provider>
-          </div>
-          <Countries />
-        </main>
-      </div>
+            </div>
+            <Countries />
+          </main>
+        </div>
+      </ThemeProvider>
     </>
   );
 }
