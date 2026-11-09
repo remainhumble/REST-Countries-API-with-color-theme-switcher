@@ -47,8 +47,23 @@ body.dark .dropdown-content a:hover {
   transform: rotate(-45deg);
 }
 
+.dark-moon-icon {
+  display: none;
+  width: 1.25rem;
+  height: 1.5rem;
+  margin-right: 0.25rem;
+  fill: currentColor;
+  vertical-align: middle;
+  color: var(--color-grey-50);
+  transform: rotate(-45deg);
+}
+
 body.dark .moon-icon {
-  color: var(--color-white-dark);
+  display: none;
+}
+
+body.dark .dark-moon-icon {
+  display: block;
 }
 
 .dropdown-content {
@@ -241,4 +256,18 @@ body.dark .moon-icon {
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+body {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+header,
+.country-card,
+button {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }

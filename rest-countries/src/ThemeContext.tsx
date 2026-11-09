@@ -3,7 +3,7 @@ import "./App.css";
 
 export const ThemeContext = createContext({
   theme: "light",
-  toggleTheme: () => {},
+  toggleTheme: () => {}
 });
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
