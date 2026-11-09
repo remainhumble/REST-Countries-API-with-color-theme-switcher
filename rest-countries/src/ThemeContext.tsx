@@ -14,9 +14,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    document.body.style.backgroundColor =
-      theme === "dark" ? "#1a202c" : "#ffffff";
-    document.body.style.color = theme === "dark" ? "#ffffff" : "#1a202c";
+    document.body.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
   return (

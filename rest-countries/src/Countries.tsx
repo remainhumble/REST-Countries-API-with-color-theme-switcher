@@ -4,11 +4,11 @@ const Countries = () => (
   <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {allCountries.map((country) => (
       <li
-        className="bg-white rounded-md overflow-hidden text-grey-950 shadow-md shadow-grey-90 cursor-pointer pb-6"
+        className="bg-white rounded-md overflow-hidden text-grey-950 shadow-md shadow-grey-90 cursor-pointer pb-6 dark:bg-blue-900-dark dark:text-white"
         key={country.alpha3Code}
       >
         <img
-          className="w-full h-48 object-cover"
+          className="w-full object-cover"
           src={country.flags.svg}
           alt={`Flag of ${country.name}`}
         />

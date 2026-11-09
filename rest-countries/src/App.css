@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-grey-950: hsl(200, 15%, 8%);
   --color-grey-50: hsl(0, 0%, 99%);
@@ -22,13 +24,31 @@ body {
   color: var(--color-grey-950);
 }
 
+body.dark {
+  background: var(--color-blue-950-dark);
+  color: var(--color-white-dark);
+}
+
+body.dark .dropdown-content,
+body.dark .dropdown-content a {
+  background-color: var(--color-blue-900-dark);
+  color: var(--color-white-dark);
+}
+
+body.dark .dropdown-content a:hover {
+  background-color: var(--color-blue-950-dark);
+}
+
 .moon-icon {
   width: 1.5rem;
   height: 1.5rem;
-  fill: currentColor;
   vertical-align: middle;
-  color: black;
+  color: var(--color-grey-950);
   transform: rotate(-45deg);
+}
+
+body.dark .moon-icon {
+  color: var(--color-white-dark);
 }
 
 .dropdown-content {

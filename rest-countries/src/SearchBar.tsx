@@ -15,14 +15,14 @@ const SearchBar = () => {
   return (
     <div>
       <input
-        className="px-4 py-3 w-full lg:w-100 shadow-md shadow-grey-90 rounded-md mt-6 mb-4"
+        className="px-4 py-3 w-full lg:w-100 shadow-md shadow-grey-90 rounded-md mt-6 mb-4 dark:bg-blue-900-dark dark:text-white"
         type="text"
         placeholder="🔍︎      Search for a country..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
       {searchTerm.trim() !== "" && (
-        <ul className="absolute bg-white rounded-md shadow-md shadow-grey-90 w-full lg:w-100 max-h-60 overflow-y-auto">
+        <ul className="absolute bg-white rounded-md shadow-md shadow-grey-90 w-full lg:w-100 max-h-60 overflow-y-auto dark:bg-blue-900-dark dark:text-white">
           {filteredData.map((item) => (
             <li
               className=" px-4 py-3 cursor-pointer hover:bg-grey-400 dark:hover:bg-grey-700 z-10"
