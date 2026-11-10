@@ -16,6 +16,9 @@
 * {
   box-sizing: border-box;
   font-family: "Nunito Sans", sans-serif;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }
 
 body {
@@ -186,31 +189,6 @@ body.dark .dark-moon-icon {
   gap: 8px;
   margin: 32px 0 0;
 
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
   @media (max-width: 1024px) {
     margin-top: 20px;
     flex-wrap: wrap;
@@ -256,18 +234,4 @@ body.dark .dark-moon-icon {
     right: 0;
     border-right-color: var(--border);
   }
-}
-
-body {
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
-header,
-.country-card,
-button {
-  transition:
-    background-color 0.3s,
-    color 0.3s;
 }
