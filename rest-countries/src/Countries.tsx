@@ -1,9 +1,14 @@
-import allCountries from "../../data.json";
-import "./App.css";
 
-const Countries = () => (
+import "./App.css";
+import type allCountries from "../../data.json";
+
+type CountriesProps = {
+  countries: (typeof allCountries)[number][];
+};
+
+const Countries = ({ countries }: CountriesProps) => (
   <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    {allCountries.map((country) => (
+    {countries.map((country) => (
       <li
         className="hover:opacity-50 text-[14px] bg-white rounded-md overflow-hidden text-grey-950 shadow-md shadow-grey-90 cursor-pointer pb-3 dark:bg-blue-900 dark:text-white"
         key={country.alpha3Code}

@@ -15,7 +15,7 @@ const SearchBar = () => {
   return (
     <div>
       <input
-        className="px-4 py-3 w-full lg:w-100 shadow-md shadow-grey-90 rounded-md mt-6 mb-4 dark:bg-blue-900-dark dark:text-white"
+        className="px-4 py-3 w-full lg:w-100 shadow-md shadow-grey-90 rounded-md mt-6 mb-4 dark:bg-blue-900 dark:text-white"
         type="text"
         placeholder="🔍︎      Search for a country..."
         value={searchTerm}

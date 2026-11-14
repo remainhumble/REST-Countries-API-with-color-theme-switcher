@@ -1,14 +1,23 @@
 import { useState } from "react";
 import "./App.css";
 
-const Filter = () => {
+type FilterProps = {
+  selectedRegion: string;
+  onRegionChange: (region: string) => void;
+};
+
+const Filter = ({ selectedRegion, onRegionChange }: FilterProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const toggleVisibility = () => {
     setIsVisible((visible) => !visible);
   };
 
-  const [selectedRegion, setSelectedRegion] = useState("Filter by Region");
   const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
+
+  const handleRegionSelect = (region: string) => {
+    onRegionChange(region);
+    setIsVisible(false);
+  };
 
   return (
     <div>
@@ -34,8 +43,7 @@ const Filter = () => {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              setSelectedRegion(filter);
-              setIsVisible(false);
+              handleRegionSelect(filter);
             }}
             key={idx}
             className="bg-grey-50 block px-4 py-3 shadow-md shadow-grey-90"
