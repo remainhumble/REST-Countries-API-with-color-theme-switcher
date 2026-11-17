@@ -15,8 +15,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
 
-
-
 ## Overview
 
 This is a Frontend Mentor challenge called "Rest Countries API with color theme switcher".
@@ -36,14 +34,10 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-
 
 ### Built with
 
@@ -67,8 +61,6 @@ import allCountries from "../../data.json";
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
 I want to familiarise myself with CSS and JS frameworks in general as they are in demand and crucial for present day web development roles and responsibilities.
@@ -78,6 +70,7 @@ And also fetching data from json files.
 
 - [Emoji Combos](https://emojicombos.com/magnifying-glass) - This helped me find a magnifying glass to copy and paste into the search bar
 - [transform](https://transform.tools/css-to-tailwind) - Convert plain CSS code to its Tailwind variants.
+- [React Router](https://reactrouter.com) - React Router Documentation.
 
 ### AI Collaboration
 
@@ -89,10 +82,8 @@ GitHub Copilot
 
 - How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
 
-I used it as a coworker that completes repetitive tasks and solve problems.
+I used it as a coworker to perform repetitive tasks and help me solve problems.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@remainhumble](https://www.frontendmentor.io/profile/remainhumble)
